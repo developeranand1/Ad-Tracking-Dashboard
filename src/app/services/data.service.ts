@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataService {
- private apiUrl = 'http://localhost:4000/api/metrics';
+ private apiUrl = 'https://backend-g7xiuthmv-anand-chaudharys-projects.vercel.app/api/metrics';
 
   constructor(private http:HttpClient) { }
 
