@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --primary:#03a9f4;
+    --color:#fff;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.header-bg {
+    background-color: var(--primary);
+    text-align: center;
+    padding: 10px;
+
+    div{
+        color: var(--color);
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+table tr td, table tr th{
+    border: 1px solid var(--primary);
+    color: #03a9f4;
+}
+
+
+input{
+    border: 1px solid var(--primary) !important;
+    color: var(--primary) !important;
+}
+
+::placeholder{
+    color: var(--primary) !important;
+}

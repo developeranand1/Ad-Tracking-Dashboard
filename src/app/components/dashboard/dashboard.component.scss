@@ -1,0 +1,27 @@
+.add-title{
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-top: 5px;
+}
+
+table tr td {
+  border: 1px solid var(--primary);
+  text-align: center;
+}
+
+table tr {
+  border: 2px solid var(--primary);
+  th {
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--color);
+    border: 1px solid var(--color);
+  }
+}
+
+
+.submit-btn{
+    background-color: var(--primary);
+    color: var(--color);
+}

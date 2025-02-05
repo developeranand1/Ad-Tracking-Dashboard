@@ -1,0 +1,85 @@
+<div class="container">
+  
+    <div class="row">
+        <div class="col-md-12">
+            <div class="add-title">Add Data Campaign</div>
+        </div>
+    </div>
+    <form [formGroup]="campaignForm" (ngSubmit)="submitCampaign()">
+
+
+        <div class="row my-2">
+            
+            <div class="col-md-3">
+                <input type="date" class="form-control  mb-2" formControlName="date" placeholder="Date" required />
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control  mb-2" formControlName="campaign_id" placeholder="Campaign ID" required />
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control  mb-2" formControlName="campaign_name" placeholder="Campaign Name" required />
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control  mb-2" formControlName="clicks"  placeholder="Clicks" required />
+            </div>
+        </div>
+        
+        <div class="row my-2">
+            <div class="col-md-3">
+                <input type="text" class="form-control  mb-2" formControlName="impressions"  placeholder="Impressions" required />
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control  mb-2" formControlName="spend"  placeholder="Spend" required />
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control  mb-2" formControlName="conversions"  placeholder="Conversions" required />
+            </div>
+            <div class="col-md-3">
+                <button class="form-control  mb-2 submit-btn" type="submit">Submit</button>
+            </div>
+        </div>
+       
+      </form>
+    
+
+</div>
+
+<hr>
+
+<div class="container">
+    <div class="row my-3">
+        <div class="col-md-12">
+            <input class="form-control" placeholder="Filter by campaign name"  type="text" (input)="filterCampaigns($event)">
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+              <tr>
+               
+                <th>Campaign ID</th>
+                <th>Campaign Name</th>
+                <th>Date</th>
+                <th>Clicks</th>
+                <th>Impressions</th>
+                <th>Spend</th>
+                <th>Conversions</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let campaign of filteredCampaigns">
+                    <td>{{ campaign.campaign_id }}</td>
+                    <td>{{ campaign.campaign_name }}</td>
+                    <td>{{ campaign.date }}</td>
+                    <td>{{ campaign.clicks }}</td>
+                    <td>{{ campaign.impressions }}</td>
+                    <td>{{ campaign.spend }}</td>
+                    <td>{{ campaign.conversions }}</td>
+                  </tr>
+            </tbody>
+          </table>
+    </div>
+  
+    <canvas id="campaignChart"></canvas>
+  </div>
