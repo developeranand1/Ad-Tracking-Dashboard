@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { Chart } from 'chart.js/auto';
 import { CommonModule } from '@angular/common';
 import { DataService } from '../../services/data.service';
-import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -59,12 +59,7 @@ export class DashboardComponent {
       this.dataService.submitCampaignsData(this.campaignForm.value).subscribe(() => {
         this.fetchCampaigns();
         this.campaignForm.reset();
-        Swal.fire({
-          icon: 'success',
-          title: 'Campaign Submitted!',
-          text: 'Your campaign was submitted successfully.',
-          confirmButtonText: 'OK',
-        });
+        alert("Add Successfully!")
       });
     }
   }
