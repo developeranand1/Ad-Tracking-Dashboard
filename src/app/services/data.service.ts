@@ -1,11 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
- private apiUrl = 'https://backend-g7xiuthmv-anand-chaudharys-projects.vercel.app/api/metrics';
+ private apiUrl = environment.apiUrl
 
   constructor(private http:HttpClient) { }
 
